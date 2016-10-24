@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,7 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T4v-sg-iML">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.2057776989" green="0.44356194650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="21b-fe-A9z">
             <objects>
-                <viewController id="4cY-jT-WsC" sceneMemberID="viewController">
+                <viewController id="4cY-jT-WsC" customClass="DefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j45-Ga-YEP"/>
                         <viewControllerLayoutGuide type="bottom" id="C56-HF-L6X"/>
@@ -58,12 +60,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church with a heart above it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DX-rf-9v8">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20577769888412378" green="0.44356194653588754" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9zc-Ui-QZU" firstAttribute="top" secondItem="j45-Ga-YEP" secondAttribute="bottom" constant="40" id="69s-ch-IbV"/>
                             <constraint firstItem="8DX-rf-9v8" firstAttribute="centerX" secondItem="CW2-fx-tVS" secondAttribute="centerX" id="X4M-CI-W6R"/>
@@ -71,6 +73,10 @@
                             <constraint firstItem="8DX-rf-9v8" firstAttribute="top" secondItem="9zc-Ui-QZU" secondAttribute="bottom" constant="20" id="zg6-Qp-Yjb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="8DX-rf-9v8" id="Hvn-2q-Ds0"/>
+                        <outlet property="emojiLabel" destination="9zc-Ui-QZU" id="vvi-G5-5ML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MNL-Lf-y3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

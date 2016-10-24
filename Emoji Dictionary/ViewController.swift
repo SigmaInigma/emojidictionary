@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var emojis = ["😀","😬","😁","😂","😍","😘","😗"]
+    var emojis = ["😀","😬","😁","😂","😃","😄","😅","😆","😇","😉","😊","🙂","🙃","☺️","😋","😌","😍","😘","😗","😜","😝","😛","😎","👻","👽"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,14 +32,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "firstSegue", sender: "🌈")
+        let emoji = emojis[indexPath.row]
+        performSegue(withIdentifier: "firstSegue", sender: emoji)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let defViewController = segue.destination as! DefinitionViewController
+        defViewController.emoji = sender as! String
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
