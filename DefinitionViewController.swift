@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DefinitionViewController: UIViewController {
+    var booSound:AVAudioPlayer!
+
     
     var emoji = ""
     
@@ -19,6 +22,7 @@ class DefinitionViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        booSound = try? AVAudioPlayer(contentsOf:URL(fileURLWithPath:Bundle.main.path(forResource: "boo", ofType: "mp3")! ))
         switch emoji{
         case "😀":
             definitionLabel.text = "A grinning face"
@@ -69,6 +73,7 @@ class DefinitionViewController: UIViewController {
         case "😎":
             definitionLabel.text = "A smiling face with sun glasses"
         case "👻":
+            booSound.play()
             definitionLabel.text = "A ghost! Boo!"
         case "👽":
             definitionLabel.text = "An alien 🚀"
