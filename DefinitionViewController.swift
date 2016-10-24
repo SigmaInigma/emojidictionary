@@ -37,7 +37,7 @@ class DefinitionViewController: UIViewController {
         case "😄":
             definitionLabel.text = "A grinning face with squinting eyes"
         case "😅":
-            definitionLabel.text = "A grinning face with squinting eyes and a sweat drop"
+            definitionLabel.text = "A grinning face with squinting \n eyes and a sweat drop"
         case "😆":
             definitionLabel.text = "A grinning face with tightly closed eyes"
         case "😇":
@@ -67,7 +67,7 @@ class DefinitionViewController: UIViewController {
         case "😜":
             definitionLabel.text = "A winking face with stuck out tounge"
         case "😝":
-            definitionLabel.text = "A face with stuck out tounge and tightly closed eyes"
+            definitionLabel.text = "A face with stuck out \n tounge and tightly closed eyes"
         case "😛":
             definitionLabel.text = "A face with stuck out tounge"
         case "😎":
